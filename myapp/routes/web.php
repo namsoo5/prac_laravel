@@ -13,7 +13,7 @@
 
 
 #라우트이름 home생성
-Route::get('/', [
+Route::get('/h', [
     'as' => 'home',
     function () {
         return '내이름은 김남수!';
