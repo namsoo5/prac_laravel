@@ -25,10 +25,6 @@ Route::get('/h', [
     }
 ]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/{name}', function ($name) {
     return $name;
 });
