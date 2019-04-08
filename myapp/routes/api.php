@@ -33,3 +33,11 @@ Route::get('/{name}', function ($name) {
 Route::get('/home/main', function () {
     return redirect(route('home'));
 });
+
+Route::get('/test/list', function () {
+    return response()->json([
+        'name' => "namsoo",
+        'message' => config('app.name').' API',
+
+    ], 200, [], JSON_PRETTY_PRINT);
+});
