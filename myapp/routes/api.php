@@ -41,3 +41,6 @@ Route::get('/test/list', function () {
 
     ], 200, [], JSON_PRETTY_PRINT);
 });
+
+#controller사용
+Route:get('jeahee', 'WelcomeControler@jeahee');
