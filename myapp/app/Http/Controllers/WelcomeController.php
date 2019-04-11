@@ -13,11 +13,11 @@ class WelcomeController extends Controller
         return view('welcome');
     }
 
-    public function jeahee()
-    {
-        $jh = Author::get();
-
-        return $jh;
-
-    }
+   # public function jeahee()
+  #  {
+ #       $jh = Author::get();
+#
+ #       return $jh;
+#
+    #}
 }

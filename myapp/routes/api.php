@@ -25,9 +25,9 @@ Route::get('/my/name', [
     }
 ]);
 
-Route::get('/{name}', function ($name) {
-    return $name;
-});
+#Route::get('/{name}', function ($name) {
+#    return $name;
+#});
 
 #생성해놓은 라우터의이름을이용해서 리다이렉트
 Route::get('/home/main', function () {
@@ -43,4 +43,5 @@ Route::get('/test/list', function () {
 });
 
 #controller사용
-Route:get('table/jeahee', 'WelcomeControler@jeahee');
+#Route:get('jeahee', 'WelcomeControler@jeahee');
+
