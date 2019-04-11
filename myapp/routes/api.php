@@ -43,4 +43,4 @@ Route::get('/test/list', function () {
 });
 
 #controller사용
-Route:get('jeahee', 'WelcomeControler@jeahee');
+Route:get('table/jeahee', 'WelcomeControler@jeahee');
