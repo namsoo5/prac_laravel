@@ -47,3 +47,4 @@ Route::get('/jeahee', 'WelcomeController@jeahee');
 
 Route::get('/hj/{id}', 'WelcomeController@hj');
 
+Route::get('/insert/{title}/{body}', 'WelcomeController@insert');

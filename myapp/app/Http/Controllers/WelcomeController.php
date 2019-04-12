@@ -27,12 +27,29 @@ class WelcomeController extends Controller
     public function hj($id)
     {
 	$db = Post1::where('id', $id)->get();
-	
+
+	if($db->isEmpty()){
+	    return array(
+	    "result"=>"can not found",
+	    "title"=>"no have data",
+	    "body"=>[]
+	    );
+	}
+
 	return array(  
-	"id"=>$id,
+	"result"=>$id,
 	"title"=>$db[0]->title,
 	"body"=>$db[0]->body
 	);
     }
+
+    public function insert($title, $body)
+    {
+	$data = new Post1;
+	$data->title = $title;
+	$data->body = $body;
+	$data->save();
 	
+	return "Success insert data";
+    }
 }
