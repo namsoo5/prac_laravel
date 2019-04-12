@@ -46,3 +46,4 @@ Route::get('/test/list', function () {
 Route::get('/jeahee', 'WelcomeController@jeahee');
 
 Route::get('/hj/{id}', 'WelcomeController@hj');
+
