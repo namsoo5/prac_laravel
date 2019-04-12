@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\model\Author;
+use App\Model\Post1;
 
 class WelcomeController extends Controller
 {
@@ -13,11 +13,26 @@ class WelcomeController extends Controller
         return view('welcome');
     }
 
-   # public function jeahee()
-  #  {
- #       $jh = Author::get();
-#
- #       return $jh;
-#
-    #}
+    public function jeahee()
+    {
+        $jh = Post1::get();
+
+        return response()->json([
+            'title' => $jh[0]->title,
+	    'body' => $jh[0]->body,
+	    ], 200, [], JSON_PRETTY_PRINT);
+
+    }
+
+    public function hj($id)
+    {
+	$db = Post1::where('id', $id)->get();
+	
+	return array(  
+	"id"=>$id,
+	"title"=>$db[0]->title,
+	"body"=>$db[0]->body
+	);
+    }
+	
 }
